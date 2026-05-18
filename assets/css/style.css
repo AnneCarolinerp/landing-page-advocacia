@@ -126,9 +126,7 @@ h3 {
   width: 25px;
   height: auto;
   filter:
-    brightness(0) saturate(100%) invert(74%)
-    sepia(32%) saturate(548%)
-    hue-rotate(3deg) brightness(96%) contrast(92%);
+    brightness(0) saturate(100%) invert(74%) sepia(32%) saturate(548%) hue-rotate(3deg) brightness(96%) contrast(92%);
 }
 
 /* =====================
@@ -212,6 +210,43 @@ h3 {
   transform: rotate(45deg);
 }
 
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.socios-caption {
+  margin-top: 10px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--gold);
+  background: rgba(3, 39, 55, 0.58);
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+}
+
+.socios-caption span {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.socios-caption strong {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
 /* =====================
    AREAS
 ===================== */
@@ -249,7 +284,7 @@ h3 {
   background: #fff;
   padding: 26px 24px;
   border-radius: 8px;
-  box-shadow: 0 5px 18px rgba(0,0,0,.05);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, .05);
 }
 
 .card-header {
@@ -262,10 +297,21 @@ h3 {
   height: 32px;
   object-fit: contain;
   filter:
-    brightness(0) saturate(100%)
-    invert(72%) sepia(34%)
-    saturate(540%) hue-rotate(6deg)
-    brightness(92%) contrast(90%);
+    brightness(0) saturate(100%) invert(72%) sepia(34%) saturate(540%) hue-rotate(6deg) brightness(92%) contrast(90%);
+}
+
+.card-header img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter:
+    brightness(0) saturate(100%) invert(72%) sepia(34%) saturate(540%) hue-rotate(6deg) brightness(92%) contrast(90%);
+}
+
+.card-header .icon-trabalhista {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .area-card h3 {
@@ -279,8 +325,35 @@ h3 {
   color: #333;
 }
 
+.area-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    border: 1px solid transparent;
+}
+
+.area-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
+    border-color: rgba(214, 173, 92, 0.35);
+}
+
+.area-card img {
+    transition: transform 0.25s ease;
+}
+
+.area-card:hover img {
+    transform: scale(1.08);
+}
+
+.area-card h3 {
+    transition: color 0.25s ease;
+}
+
+.area-card:hover h3 {
+    color: #0b3a4a;
+}
+
 /* =====================
-   ESCRITORIO (CHECKS RESTAURADOS)
+   ESCRITORIO
 ===================== */
 .escritorio {
   background: var(--primary);
@@ -322,8 +395,63 @@ h3 {
   font-weight: 700;
   flex-shrink: 0;
   box-shadow:
-    inset 0 2px 4px rgba(255,255,255,.12),
-    0 3px 6px rgba(0,0,0,.25);
+    inset 0 2px 4px rgba(255, 255, 255, .12),
+    0 3px 6px rgba(0, 0, 0, .25);
+}
+
+/* PARCEIROS */
+
+.partners-dark {
+  background:
+    linear-gradient(rgba(3, 45, 64, 0.93),
+      rgba(3, 45, 64, 0.93)),
+    url("../img/parceiros.jpg") center / cover no-repeat;
+
+  padding: 65px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.partners-title {
+  color: #fff;
+  margin-bottom: 38px;
+}
+
+.partners-grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.partner-card {
+  width: 210px;
+  min-height: 110px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-4px);
+  border-color: #d6ad5c;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.partner-card img {
+  max-width: 150px;
+  max-height: 62px;
+  object-fit: contain;
 }
 
 /* =====================
@@ -332,7 +460,7 @@ h3 {
 .cta {
   padding: var(--space-md) 20px;
   background:
-    linear-gradient(rgba(8,30,50,.6), rgba(8,30,50,.6)),
+    linear-gradient(rgba(8, 30, 50, .6), rgba(8, 30, 50, .6)),
     url("../img/justica.png") center / cover no-repeat;
 }
 
@@ -389,6 +517,7 @@ h3 {
   text-align: center;
   padding: 30px;
 }
+
 .dev-credit {
   margin-top: 6px;
   font-size: 14px;
@@ -407,8 +536,40 @@ h3 {
 /* =====================
    RESPONSIVO
 ===================== */
-@media (max-width: 900px) {
+@media (max-width: 480px) {
+  .partners-dark {
+    padding: 55px 18px;
+  }
 
+  .partner-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .escritorio {
+    padding: 50px 20px;
+  }
+
+  .escritorio-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .escritorio .about-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .escritorio .about-list li {
+    margin-bottom: 14px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
   .hero-container {
     padding: 0 var(--space-sm);
   }
@@ -417,6 +578,21 @@ h3 {
   .areas-grid,
   .escritorio-grid {
     grid-template-columns: 1fr;
+  }
+
+    .escritorio-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 20px;
+  }
+
+  .escritorio .about-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .escritorio .about-list li {
+    margin-bottom: 12px;
   }
 
 }
