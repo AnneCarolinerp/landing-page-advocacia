@@ -33,6 +33,7 @@
   src: url("../fonts/AddingtonCF-DemiBold.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -40,13 +41,31 @@
   src: url("../fonts/AddingtonCF-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "BentoSans";
-  src: url("../fonts/BentonSans-Light.otf") format("opentype");
+  src: url("../fonts/Benton-Sans/BentonSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BentoSans";
+  src: url("../fonts/Benton-Sans/BentonSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BentoSans";
+  src: url("../fonts/Benton-Sans/BentonSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* =====================
@@ -281,8 +300,12 @@ h3 {
 .socios-caption strong {
   display: block;
   margin-bottom: 4px;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
+}
+
+.socios-caption .socios-oab {
+    font-size: 12px ;
 }
 
 .about .about-list li {
@@ -529,6 +552,10 @@ h3 {
   background: var(--primary);
   color: #fff;
   text-align: center;
+}
+
+.footer .footer-oab {
+    font-size: 14px;
 }
 
 .dev-credit {
